@@ -2,7 +2,7 @@
 
 
 body {
-  background: #ffffff;
+  background-color: #ffffff;
   color: #898989;
   font-family: 'Poppins', helvetica;
   font-size: 15px;
@@ -35,7 +35,7 @@ h4 {
 }
 
 a {
-  color: #292929;
+  color: #333;
   text-decoration: none !important;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
@@ -45,6 +45,7 @@ a {
 }
 
 a:hover {
+    color: #509bf8;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -164,6 +165,23 @@ p {
   margin-bottom: 30px;
 }
 
+/*----------------------------------------------------------------------------------*/
+/*    Fontawesome ICONS
+/*----------------------------------------------------------------------------------*/
+.fa-paint-brush {
+    color: #509bf8;
+}
+.fa-edit {
+    color: #509bf8;
+}
+.fa-laptop {
+    color: #509bf8;
+}
+.fa-chart-bar {
+    color: #509bf8;
+}
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  Navbar Top
 /*-----------------------------------------------------------------------------------*/
@@ -171,6 +189,7 @@ p {
 nav {
   position: fixed;
   background: #fff;
+    color: #509bf8;
   z-index: 1000;
   width: 100%;
   padding: 20px;
@@ -187,7 +206,10 @@ nav {
   padding-top: 16px;
 }
 
-.nav-link: hover {
+.navbar-nav ul li a: hover {
+    color: #509bf8;
+}
+.nav-item {
     color: #509bf8;
 }
 nav ul li {
@@ -258,11 +280,6 @@ nav ul li a {
   min-width: 100%;
   height: 32rem;
 }
-#header {
-  background-image: url("/images/Broeskap_Design.png");
-  height: auto;
-  width: 100%;
-}
 
 #img-responsive {
     width: 100%;
@@ -312,37 +329,13 @@ nav ul li a {
 #about {
   width: 100%;
   height: auto;
-  background: #f7f7f7;
-  padding-top: 190px;
+  background: #a9a9a9;
+    color: #fff;
+  padding-top: 50px;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation-iteration-count: 2;
 }
-
-#about .div-img-bg {
-  padding-bottom: 30px;
-  border: 20px solid #509bf8;;
-}
-
-#about .div-img-bg .about-img img {
-  width: 100%;
-  box-shadow: 0px 0px 85px 0px rgba(0, 0, 0, 0.14);
-  margin-top: -60px;
-  margin-left: 40px;
-  height: 400px;
-  object-fit: cover;
-}
-
-#about .about-descr .p-heading {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  text-align: left;
-}
-
-#about .about-descr .separator {
-  max-width: 80%;
-  margin-bottom: 0;
-  text-align: left;
-}
-
-
 
 
 
@@ -353,6 +346,7 @@ nav ul li a {
 #services {
   background: #f7f7f7;
   position: relative;
+    padding-top: 50px;
   padding-bottom: 80px;
 }
 
@@ -405,7 +399,7 @@ nav ul li a {
 }
 
 .services-carousel .owl-dot.active {
-  background-color: #b8a07e;
+  background-color: #509bf8;
 }
 
 .owl-nav {
@@ -474,13 +468,112 @@ nav ul li a {
   max-width: 100%;
 }
 
+.panel-main img,
+.thumbs img {
+  width: 70%;
+  height: auto;
+  padding-bottom: 50px;
+
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+/* ===============================
+12. Portfolio
+================================ */
+
+.panel-main img,
+.thumbs img {
+  width: 100%;
+  height: auto;
+}
+
+.thumbs {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 5px;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease-in 1 forwards;
+}
+
+
+/* --- Portolio filter --- */
+
+
+ul.portfolio-categ{
+	margin:10px 0 30px 0;
+	padding:0;
+	float:left;
+	list-style:none;
+}
+
+ul.portfolio-categ li{
+	margin:0;
+	padding:0 20px 0 0;
+	float:left;
+	list-style:none;
+	font-size:13px;
+	font-weight:600;
+}
+
+ul.portfolio-categ li a{
+	display:block;
+	padding:35x 0 35x 0;
+	color:#353535;
+	font-size:16px;
+	text-decoration:none;
+	font-weight:700;
+}
+
+ul.portfolio-categ li.active a:hover, ul.portfolio-categ li a:hover,ul.portfolio-categ li a:focus,ul.portfolio-categ li a:active {
+	text-decoration:none;
+	outline:0;
+}
+
+
+
+/* --- portfolio detail --- */
+.top-wrapper {
+	margin-bottom:20px;
+}
+
+.related-works .item figcaption h3 {
+	font-size:16px;
+}
+
+
 /*-----------------------------------------------------------------------------------*/
 /*  Skills
 /*-----------------------------------------------------------------------------------*/
 
 #skills {
-    background-color: lightgray;
-    padding: 20px;
+    background-color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 
@@ -491,6 +584,8 @@ nav ul li a {
 #contact {
   height: auto;
   width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
   
 }
 
@@ -560,17 +655,19 @@ nav ul li a {
   display: inline-block;
   float: none;
   margin: 20px 0 20px 0;
+    color: #509bf8;
 }
 
 #footer .socials-media ul li {
   float: left;
   margin-left: 10px;
   margin-right: 10px;
+    color: #509bf8;
 }
 
 #footer .socials-media ul li a {
   font-size: 24px;
-  color: #999;
+  color: #509bf8;
   letter-spacing: 0.1em;
   font-weight: 500;
   background: transparent;
@@ -583,7 +680,7 @@ nav ul li a {
 }
 
 #footer .socials-media ul li a:hover {
-  color: #509bf8;
+  color: #fff;
   -moz-transition: all 0.5s ease-in-out 0s;
   -ms-transition: all 0.5s ease-in-out 0s;
   -o-transition: all 0.5s ease-in-out 0s;
@@ -592,6 +689,7 @@ nav ul li a {
 }
 
 #footer p {
+    color: #fff;
   font-size: 12px;
   letter-spacing: 0.1em;
   font-weight: 500;
